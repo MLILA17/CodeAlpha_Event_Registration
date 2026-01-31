@@ -1,9 +1,6 @@
-Sawa 👍
-Hii hapa **README.md** ya **TASK 2: Event Registration System (Express.js + MongoDB)** — iko **assignment-ready**, clean, na professional. Unaweza **kunakili moja kwa moja**.
 
----
 
-```md
+```
 # 📅 Event Registration System (Backend)
 
 ## 📌 Task 2 Overview
