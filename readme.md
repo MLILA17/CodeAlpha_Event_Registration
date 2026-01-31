@@ -24,7 +24,7 @@ It allows users to view events, register for events, manage their registrations,
 ---
 
 ## 📁 Project Structure
-```
+``
 event-system/
 │
 ├── config/
@@ -43,7 +43,7 @@ event-system/
 ├── server.js
 ├── package.json
 └── .env
-```
+``
 
 ---
 
