@@ -1,23 +1,21 @@
-const express = require("express");
-const dotenv = require("dotenv");
+require('dotenv').config();
+const express = require('express');
+const cors = require('cors');
+const connectDB = require('./config/db');
 
-dotenv.config();
+const app = express();
 
-const app = express(); // ✅
+// DB
+connectDB();
 
+// Middleware
+app.use(cors());
 app.use(express.json());
 
-// routes
-const eventRoutes = require("./src/routes/eventRoutes");
-app.use("/api", eventRoutes);
-
-// test route
-app.get("/", (req, res) => {
-  res.send("Event Registration API running...");
-});
+// Routes
+app.use('/api/auth', require('./routes/auth'));
+app.use('/api/events', require('./routes/events'));
+app.use('/api/registrations', require('./routes/registrations'));
 
 const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
-});
+app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
